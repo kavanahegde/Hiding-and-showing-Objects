@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiding and showing objects</title>
+    <script type="text/javascript">
+        function showhide(){
+            if(!document.getElementById)return;
+            var heading1=document.getElementById("heading1");
+            var heading2=document.getElementById("heading2");
+            var showheading1=document.checkboxform.checkbox1.checked;
+            var showheading2=document.checkboxform.checkbox2.checked;
+            heading1.style.visibility=(showheading1)?"visibility":"hidden";
+            heading2.style.visibility=(showheading2)?"visibility":"hidden";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="heading1">This is the First Heading</h1>
+    <h1 id="heading2">This is the second Heading</h1>
+    <p> Using W3c dom , you can choose weather to show or hide the heading on this page using the checkbox below.</p>
+    <form name="checkboxform">
+        <input type="checkbox" name="checkbox1"
+       
+    onclick="showhide();" checked="checked"  />
+    <span style="font-weight: bold;">show first heading</span><br/>
+    <input type="checkbox" name="checkbox2"
+       
+    onclick="showhide();" checked="checked"  />
+    <span style="font-weight: bold;">show second heading</span><br/>
+
+    </form>
+</body>
+</html>
